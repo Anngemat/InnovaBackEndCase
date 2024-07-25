@@ -64,7 +64,7 @@ public class baglanti implements Runnable {
 			
 		}
 	}
-	public void BilgileriGetir() {
+	public String BilgileriGetir() {
 		String sorgu = "Select * from MasrafTakip";
 		try {
 			statement = con.createStatement();
@@ -79,9 +79,10 @@ public class baglanti implements Runnable {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+		return "";
 	}
 	
-	public void VeriGüncelle() {
+	public String VeriGüncelle() {
 		try {
 			statement = con.createStatement();
 			Scanner sc = new Scanner(System.in);
@@ -94,9 +95,10 @@ public class baglanti implements Runnable {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+		return "";
 	}
 	
-	public void KisiEkle() {
+	public String KisiEkle() {
 		try {
 			statement = con.createStatement();
 			Scanner sc = new Scanner(System.in);
@@ -118,10 +120,11 @@ public class baglanti implements Runnable {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+		return "";
 		
 	}
 	
-	public void KisiSil() {
+	public String KisiSil() {
 		try {
 			statement = con.createStatement();
 			Scanner sc = new Scanner(System.in);
@@ -132,6 +135,7 @@ public class baglanti implements Runnable {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+		return "";
 		
 	}
 	public String toplamHarcama() {

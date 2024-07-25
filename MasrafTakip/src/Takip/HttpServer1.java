@@ -39,7 +39,7 @@ public class HttpServer1 {
         public void handle(HttpExchange exchange) throws IOException {
             baglanti db = new baglanti();
             StringBuilder response = new StringBuilder();
-            response.append(db.toplamHarcama());
+            response.append(db.VeriGüncelle());
             exchange.sendResponseHeaders(200, response.toString().getBytes().length);
             OutputStream os = exchange.getResponseBody();
             os.write(response.toString().getBytes());
@@ -52,7 +52,7 @@ public class HttpServer1 {
         public void handle(HttpExchange exchange) throws IOException {
             baglanti db = new baglanti();
             StringBuilder response = new StringBuilder();
-            response.append(db.toplamHarcama());
+            response.append(db.KisiEkle());
             exchange.sendResponseHeaders(200, response.toString().getBytes().length);
             OutputStream os = exchange.getResponseBody();
             os.write(response.toString().getBytes());
@@ -64,7 +64,7 @@ public class HttpServer1 {
         public void handle(HttpExchange exchange) throws IOException {
             baglanti db = new baglanti();
             StringBuilder response = new StringBuilder();
-            response.append(db.toplamHarcama());
+            response.append(db.KisiSil());
             exchange.sendResponseHeaders(200, response.toString().getBytes().length);
             OutputStream os = exchange.getResponseBody();
             os.write(response.toString().getBytes());
@@ -76,7 +76,7 @@ public class HttpServer1 {
         public void handle(HttpExchange exchange) throws IOException {
             baglanti db = new baglanti();
             StringBuilder response = new StringBuilder();
-            response.append(db.toplamHarcama());
+            response.append(db.BilgileriGetir());
             exchange.sendResponseHeaders(200, response.toString().getBytes().length);
             OutputStream os = exchange.getResponseBody();
             os.write(response.toString().getBytes());
