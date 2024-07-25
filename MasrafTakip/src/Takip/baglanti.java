@@ -134,7 +134,7 @@ public class baglanti implements Runnable {
 		}
 		
 	}
-	public void toplamHarcama() {
+	public String toplamHarcama() {
 		String sorgu = "Select * from MasrafTakip";
 		int toplamMasraf = 0;
 		try {
@@ -147,10 +147,12 @@ public class baglanti implements Runnable {
 				System.out.println("isim : " + isim + " masraf: " + masraf );
 				
 			}
+			return "";
 			
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+		return "";
 		
 	}
 	
